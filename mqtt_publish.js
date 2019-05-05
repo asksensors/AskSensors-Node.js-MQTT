@@ -6,19 +6,17 @@
  */
 
 var mqtt = require('mqtt')
-var client  = mqtt.connect('https://asksensors.com')
+var client  = mqtt.connect('https://mqtt.asksensors.com')
 var pubTopic = 'publish/.............................' // TODO: Add your API KEY IN
 
-var timerInterval = 5000;		// timer interval in ms
+var timerInterval = 25000;		// timer interval in ms
 
 // Function declaration: publish
 function send_data(){
-	//construct payload
+	//construct payload for module1 and module2
 	var payload = 'module1='; 
 	payload+= 100*Math.random();
 	payload+= '&module2=';
-	payload+= 100*Math.random();
-	payload+= '&module3=';
 	payload+= 100*Math.random();
 	// publish
 	client.publish(pubTopic, payload);
