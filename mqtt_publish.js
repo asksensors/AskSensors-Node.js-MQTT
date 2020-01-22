@@ -7,7 +7,7 @@
 
 var mqtt = require('mqtt')
 var client  = mqtt.connect('https://mqtt.asksensors.com',{username:"........"})// TODO: fill your username
-var pubTopic = '................../..................'; // TODO: fill your topic: username/apiKeyIn
+var pubTopic = 'publish/................../..................'; // TODO: fill your topic: publish/username/apiKeyIn
 
 var timerInterval = 25000;		// timer interval in ms
 
